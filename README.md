@@ -10,3 +10,8 @@
 docker-compose up -d
 ```
 6. Levantar: ```yarn start:dev```
+
+1. Incio del proyecyo con NestCLI
+2. Configuracion de PostgreSQL con docker-compose
+3. Coneccion a la DB
+4. Insercion de la tabla Product mediante TypeOrm
