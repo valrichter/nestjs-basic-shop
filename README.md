@@ -11,6 +11,7 @@ docker-compose up -d
 ```
 6. Levantar: ```yarn start:dev```
 
+## Acciones ralizadas
 1. Incio del proyecyo con NestCLI
 2. Configuracion de PostgreSQL con docker-compose
 3. Coneccion a la DB
