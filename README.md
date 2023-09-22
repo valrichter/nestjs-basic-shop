@@ -16,3 +16,4 @@ docker-compose up -d
 2. Configuracion de PostgreSQL con docker-compose
 3. Coneccion a la DB
 4. Insercion de la tabla Product mediante TypeOrm
+5. Se agrego el Product DTO
