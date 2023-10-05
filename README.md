@@ -12,8 +12,13 @@ docker-compose up -d
 
 ## Acciones ralizadas
 
+10.12
 1. Incio del proyecyo con NestCLI
 2. Configuracion de PostgreSQL con docker-compose
 3. Coneccion a la DB
 4. Insercion de la tabla Product mediante TypeOrm
 5. Se agrego el Product DTO, se actualizo su CRUD y se agregaron propiedades a su DTO
+6. Manejo de errores en ```products.service```
+7. Cofiguracion de @BeforeInsert() y @BeforeUpdate() en ```product.entity``` para insercion de etiquetas (slug) automaticamente
+8. Se agrego findAll, findOne, y remove a ```products.service``` API
+9. Se agrego paginacion a findAll de ```products.service```
