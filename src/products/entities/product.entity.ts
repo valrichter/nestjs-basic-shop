@@ -1,4 +1,10 @@
-import { BeforeInsert, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  BeforeInsert,
+  BeforeUpdate,
+  Column,
+  Entity,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 
 @Entity()
 export class Product {
@@ -46,7 +52,13 @@ export class Product {
   })
   gender: string;
 
-  //tags
+  // Le explico a postgres como quiero q sea grabado
+  @Column({
+    type: 'text',
+    array: true,
+    default: [],
+  })
+  tags: string[];
   //images
 
   @BeforeInsert()
@@ -54,8 +66,17 @@ export class Product {
     if (!this.slug) {
       this.slug = this.title;
     }
-    this.slug = this.slug.toLowerCase().replaceAll(/ /g, '_');
+    this.slug = this.slug
+      .toLowerCase()
+      .replaceAll(' ', '_')
+      .replaceAll("'", '');
   }
 
-  // @BeforeUpdate
+  @BeforeUpdate()
+  checkSlugUpdate() {
+    this.slug = this.slug
+      .toLowerCase()
+      .replaceAll(' ', '_')
+      .replaceAll("'", '');
+  }
 }

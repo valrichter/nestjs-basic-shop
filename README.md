@@ -12,7 +12,7 @@ docker-compose up -d
 
 ## Acciones ralizadas
 
-10.12
+10.18 -> 11.1
 1. Incio del proyecyo con NestCLI
 2. Configuracion de PostgreSQL con docker-compose
 3. Coneccion a la DB
@@ -22,3 +22,6 @@ docker-compose up -d
 7. Cofiguracion de @BeforeInsert() y @BeforeUpdate() en ```product.entity``` para insercion de etiquetas (slug) automaticamente
 8. Se agrego findAll, findOne, y remove a ```products.service``` API
 9. Se agrego paginacion a findAll de ```products.service```
+10. Se agrego busqueda por id o slug al metodo findOne de ```products.service```
+11. Se agrego actualizacion por id de los atributos de product mediante la funcion update de ```products.service```
+12. Se agrego una nueva columba "Tags" a la entidad Products  
